@@ -144,7 +144,6 @@ def draw_zone(frame, alert=False):
 #  SAVE HELPERS 
 
 def save_screenshot(frame, pid):
-
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     path = f"{OUTPUT_DIR}/screenshots/person{pid}_{ts}.jpg"
     cv2.imwrite(path, frame)
@@ -171,8 +170,7 @@ def save_clip(pid, frames):
     print(f"[CLIP] {path}")
 
 
-# ───────────────── HUD ──────────────────────
-
+# HUD 
 def draw_hud(frame):
     global active
     global zone_pts
